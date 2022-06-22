@@ -1,7 +1,19 @@
+// main.go
 package main
 
-import "fmt"
+import (
+	"auth-api/database"
+	"auth-api/routes"
+
+	"github.com/gofiber/fiber/v2"
+)
 
 func main() {
-	fmt.Println("Hello World")
+	// GORMセット
+	database.Connect()
+
+	app := fiber.New()
+	routes.Setup(app)
+
+	app.Listen(":80")
 }
