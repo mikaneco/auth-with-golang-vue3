@@ -17,6 +17,8 @@ var (
 	password       = os.Getenv("MYSQL_PASSWORD")
 	dbName         = os.Getenv("MYSQL_DATABASE")
 	datasourceName = fmt.Sprintf(schema, username, password, dbName)
+	// DBインスタンス
+	DB *gorm.DB
 )
 
 func Connect() {
@@ -24,5 +26,9 @@ func Connect() {
 	if err != nil {
 		panic("Could not connect to the database")
 	}
+
+	// コネクション情報を追加
+	DB = connection
+
 	connection.AutoMigrate(&models.User{})
 }
