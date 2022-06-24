@@ -2,7 +2,8 @@
 Golang + Vue.js + docker を用いたアプリケーションのサンプル
 
 # バージョン
-Go => 1.15
+Go v1.15
+Fiber v2.34.1
 
 # 起動方法
 ```
@@ -12,13 +13,13 @@ docker-compose up
 
 # APIの基本アクセス
 ## ユーザー登録
-### エンドポイント
+エンドポイント
 http://localhost/api/register
 
-### メソッド
+メソッド
 POST
 
-### リクエストデータ
+リクエストデータ
 ```
 {
   "first_name": "michi",
@@ -30,13 +31,13 @@ POST
 ```
 
 ## ログイン
-### エンドポイント
+エンドポイント
 http://localhost/api/login
 
-### メソッド
+メソッド
 POST
 
-### リクエストデータ
+リクエストデータ
 ```
 {
   "email": "test@example.com",
@@ -45,27 +46,27 @@ POST
 ```
 
 ## ユーザーデータの表示
-### エンドポイント
+エンドポイント
 http://localhost/api/user
 
-### メソッド
+ソッド
 GET
 
 ## ログアウト
-### エンドポイント
+エンドポイント
 http://localhost/api/logout
 
-### メソッド
+メソッド
 GET
 
 ## パスワードリセットメール送信
-### エンドポイント
+エンドポイント
 http://localhost/api/forgot
 
-### メソッド
+メソッド
 POST
 
-### リクエストデータ
+リクエストデータ
 ```
 {
   "email": "test@example.com",
@@ -73,13 +74,13 @@ POST
 ```
 
 ## パスワード再設定
-### エンドポイント
+エンドポイント
 http://localhost/api/reset
 
-### メソッド
+メソッド
 POST
 
-### リクエストデータ
+リクエストデータ
 ```
 
 {
