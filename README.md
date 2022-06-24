@@ -49,7 +49,7 @@ POST
 http://localhost/api/user
 
 ### メソッド
-POST
+GET
 
 ## ログアウト
 ### エンドポイント
@@ -58,4 +58,34 @@ http://localhost/api/logout
 ### メソッド
 GET
 
+## パスワードリセットメール送信
+### エンドポイント
+http://localhost/api/forgot
+
+### メソッド
+POST
+
+### リクエストデータ
+```
+{
+  "email": "test@example.com",
+}
+```
+
+## パスワード再設定
+### エンドポイント
+http://localhost/api/reset
+
+### メソッド
+POST
+
+### リクエストデータ
+```
+
+{
+  "token": "メールに記載されたトークン ",
+  "password": "abc",
+  "password_confirm": "abc"
+}
+```
 
